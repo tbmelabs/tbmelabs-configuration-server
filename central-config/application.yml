@@ -1,16 +1,16 @@
 eureka:
   administrator:
-    name: ${EUREKA_USERNAME}
-    password: ${EUREKA_PASSWORD}
+    name: eureka-admin
+    password: Welcome$18
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_DEFAULT_ZONE}
+      defaultZone: http://${eureka.administrator.name}:${eureka.administrator.password}@localhost:8761/eureka
   instance:
     metadata-map:
       user:
-        name: ${ACTUATOR_USERNAME}
-        password: ${ACTUATOR_PASSWORD}
-        role: ${ACTUATOR_ROLE}
+        name: actuator-admin
+        password: Welcome$18
+        role: ACTUATOR
 management:
   endpoints:
     web:
@@ -19,11 +19,3 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
-security:
-  oauth2:
-    client:
-      access-token-uri: ${AUTHORIZATION_SERVER_URI}/oauth/token
-      user-authorization-uri: ${AUTHORIZATION_SERVER_URI}/oauth/authorize
-    resource:
-      prefer-token-info: false
-      user-info-uri: ${AUTHORIZATION_SERVER_URI}/user

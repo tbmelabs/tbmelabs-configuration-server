@@ -6,8 +6,8 @@ eureka:
 security:
   oauth2:
     client:
-      client-id: ${CLIENT_ID}
-      client-secret: ${CLIENT_SECRET}
+      client-id: eureka
+      client-secret: put-secret-here
 spring:
   application:
     name: eureka-peer-1

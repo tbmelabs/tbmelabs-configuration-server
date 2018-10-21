@@ -1,26 +1,6 @@
-eureka:
-  administrator:
-    name: eureka-admin
-    password: Welcome$18
-  client:
-    serviceUrl:
-      defaultZone: http://${eureka.administrator.name}:${eureka.administrator.password}@localhost:8761/eureka
-  instance:
-    metadata-map:
-      user:
-        name: actuator-admin
-        password: Welcome$18
-        role: ACTUATOR
 logging:
   level:
     org:
       springframework:
         web: DEBUG
     root: DEBUG
-security:
-  oauth2:
-    client:
-      access-token-uri: http://localhost:88/auth/oauth/token
-      user-authorization-uri: http://localhost:88/auth/oauth/authorize
-    resource:
-      user-info-uri: http://localhost:88/auth/user

@@ -4,7 +4,7 @@ spring:
 security:
   oauth2:
     client:
-      client-id: ${CLIENT_ID}
-      client-secret: ${CLIENT_SECRET}
+      client-id: spring-boot-admin
+      client-secret: put-secret-here
 server:
-  port: ${SERVER_PORT}
+  port: 81
