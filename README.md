@@ -15,7 +15,18 @@ Make sure to install the following software before starting:
 
 ### Installing
 
-This project does not need any special installation steps.
+#### Kafka
+
+This project requires [Apache Kafka](https://kafka.apache.org/) in order to broadcast the property-changed-event. An easy local setup is to start a [spotify/kafka](https://github.com/spotify/docker-kafka)-container in your local [Docker](https://www.docker.com/) environment.
+
+You could also disable the bus with the following `application-dev.yml`. It is a good option for development environments.
+
+```
+spring:
+  cloud:
+    bus:
+      enabled: false
+```
 
 ## Running the tests
 
